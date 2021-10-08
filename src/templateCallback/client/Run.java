@@ -18,6 +18,7 @@ public class Run {
 		String userId="DEV";
 		String password = new MemberDao().selectPassword(userId, new ConnectionMaker() {
 	
+			
 			@Override
 			public Connection getConnection(String a, String b) {
 				Connection conn = null;
