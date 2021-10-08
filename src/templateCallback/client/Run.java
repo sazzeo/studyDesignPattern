@@ -17,9 +17,9 @@ public class Run {
 		//따로 상속을 하지 않아도 인터페이스만 구체적으로 구현한 뒤 매개변수로 넘겨줌으로써 템플릿 메소드 패턴의 단점을 보완함
 		String userId="DEV";
 		String password = new MemberDao().selectPassword(userId, new ConnectionMaker() {
-			
+	
 			@Override
-			public Connection getConnection() {
+			public Connection getConnection(String a, String b) {
 				Connection conn = null;
 				try {
 					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","BM" , "1234");

@@ -16,12 +16,13 @@ public class MemberDao {
 		Connection conn = null;
 		PreparedStatement pstm = null;
 		ResultSet rset = null;
-		
+		String a="";
+		String b="";
 		
 		try {
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = connectionFactory.getConnection();
+			conn = connectionFactory.getConnection(a,b);
 					
 					
 			String query = "select password from member where user_id = ?";
