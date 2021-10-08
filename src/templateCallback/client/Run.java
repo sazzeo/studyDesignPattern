@@ -24,6 +24,7 @@ public class Run {
 				try {
 					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","BM" , "1234");
 				} catch (SQLException e) {
+					
 					e.printStackTrace();
 				}
 				
