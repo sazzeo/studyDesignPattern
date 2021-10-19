@@ -1,5 +1,6 @@
 package proxy;
 
+
 public class Woman implements Developer {
 	
 	
